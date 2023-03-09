@@ -1,0 +1,209 @@
+html,body {
+	margin:0;
+}
+
+
+ h1 {
+
+	font-size: 60px;
+  font-family: Avara;
+  color: #04233B;
+}
+
+.waves {
+  padding: 2%;
+  position: sticky;
+  align-items: flex-end;
+  animation: wiggle 1s infinite;
+}
+
+@keyframes wiggle{
+  0% {
+    transform: translateY(0);
+
+  }
+
+  50%{
+    transform: translateY(5px);
+  
+  }
+
+  0%{
+    transform: translateY(0);
+  
+  }
+}
+
+.sidenav {
+ height: 100%; 
+ padding-top: 25%;
+ position: absolute;
+ top: 0;
+ right: 82%;
+ font-size: 36px;
+ margin-left: 20px;
+}
+
+
+.sidenav a {
+  padding: 20px 20px 20px 22px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 32px;
+  font-family: Avara;
+  border: 5px  solid #04233B;
+  background-color: #e4f5f4;
+  display: block;
+  transition: 0.3s;
+}
+
+@media (max-width: 500px){
+ .sidenav a {
+  font-size: 15px;
+ }
+ .sidenav {
+   padding-top: 50%;
+    top: 50%;
+    right: 65%;
+  }
+
+ }
+
+.img__wrap {
+  position: absolute;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  margin: 10%;
+  align-items: center;
+  align-content: center;
+
+ 
+}
+
+.img__wrap img{
+    border: 5px  solid #04233B;
+}
+
+.img__description {
+  position: relative;
+  text-align: center;
+  font-family: Avara;
+  border: 5px  solid #04233B;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width:500px){
+  .img__description {
+    visibility: visible;
+    opacity: 1;
+  }
+
+}
+.sidenav a:hover {
+  color: #04233B;
+  opacity: 80%;
+  animation: animate .5s infinite;
+  cursor: pointer;
+}
+
+@keyframes animate{
+  0% {
+    transform: translateX(0);
+  }
+
+  50%{
+    transform: translateX(20px);
+  }
+
+  0%{
+    transform: translateX(0);
+  }
+}
+
+.gallery a{
+ 
+ align-items: flex-end;
+ padding: 2%;
+}
+
+
+.slideshow{
+    width: 30%;
+    height: 30%;
+    border: 5px  solid #04233B;
+    position: sticky;
+    top: 50%;
+    left: 35%;
+    overflow: hidden;
+  
+}
+
+.slides{
+    width: 100%;
+    display: flex;
+    animation: slide 40s infinite;
+}
+
+.slides img{
+    width: 100%;
+    }
+
+
+
+
+@keyframes slide{
+
+    90% {
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateX(-290%);
+        opacity: 0;
+    }
+
+
+}
+
+@media (max-width:500px){
+ .slideshow {
+  left: 40%;
+  width: 100%;
+  position: fixed;
+ }
+ @keyframes slide{
+
+    90% {
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateX(-60%);
+        opacity: 0;
+    }
+}
+ .slides img{
+    width: 30%;
+    }
+
+
+}
+    
+
+ 
